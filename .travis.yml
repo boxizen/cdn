@@ -15,7 +15,7 @@ before_install:
 - export TZ='Asia/Shanghai'
 
 install:
-- node ./escape.js
+- npm install
 
 script:
 - node ./escape.js

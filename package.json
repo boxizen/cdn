@@ -1,0 +1,22 @@
+{
+  "name": "cdn",
+  "version": "1.0.0",
+  "description": "[![Build Status](https://travis-ci.com/boxizen/cdn.svg?branch=master)](https://travis-ci.com/boxizen/cdn)",
+  "main": "conf.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/boxizen/cdn.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/boxizen/cdn/issues"
+  },
+  "homepage": "https://github.com/boxizen/cdn#readme",
+  "dependencies": {
+    "which": "^2.0.2"
+  }
+}
