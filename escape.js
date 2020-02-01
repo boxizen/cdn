@@ -1,0 +1,1 @@
+console.log('excape install & script lifecicle');

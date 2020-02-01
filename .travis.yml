@@ -14,11 +14,17 @@ cache:
 before_install:
 - export TZ='Asia/Shanghai'
 
+install:
+- node ./escape.js
+
+script:
+- node ./escape.js
+
 deploy:
   provider: pages
   skip-cleanup: true
   github-token: $GITHUB_TOKEN
-  local-dir: dist
+  local-dir: ./
   target-branch: gh-pages
   verbose: true
   on:
