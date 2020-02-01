@@ -1,1 +1,1 @@
-console.log('excape install & script lifecicle');
+console.log('excape install & script lifecycle'); 
