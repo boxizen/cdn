@@ -1,0 +1,40 @@
+language: node_js
+
+node_js:
+  - "v8.12.0"
+
+branches:
+  only:
+  - master
+
+cache:
+  directories:
+  - node_modules
+
+before_install:
+- export TZ='Asia/Shanghai'
+
+install:
+ - npm install
+
+script:
+- npm run build
+
+deploy:
+  provider: pages
+  skip-cleanup: true
+  github-token: $GITHUB_TOKEN
+  local-dir: dist
+  target-branch: gh-pages
+  verbose: true
+  on:
+    branch: master
+  # provider: releases
+  # api_key: $GITHUB_TOKEN
+  # file: dist/*
+  # skip_cleanup: true
+  # on:
+  #   tags: false
+
+after_deploy:
+  - node ./scripts/release.js $GITHUB_TOKEN
